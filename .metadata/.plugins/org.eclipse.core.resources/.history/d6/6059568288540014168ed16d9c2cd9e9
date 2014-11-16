@@ -1,0 +1,42 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Date;
+
+/**
+ * 
+ */
+
+/**
+ * @author weirenwang
+ *
+ */
+public class preProcessing {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		String file = "0114.txt";
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(file));
+			String line;
+			while((line = br.readLine()) != null){
+				String[] parts = line.split(" ");
+				Date start = new Date(Long.parseLong(parts[1]));
+				Date end = new Date(Long.parseLong(parts[1]));
+				System.out.println(start);
+				System.out.println(end);
+			}
+			br.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

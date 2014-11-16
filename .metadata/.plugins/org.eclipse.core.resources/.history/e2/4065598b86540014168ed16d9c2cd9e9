@@ -1,0 +1,14 @@
+
+public class preProcessing {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String file = "0114.txt";
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		
+	}
+
+}
